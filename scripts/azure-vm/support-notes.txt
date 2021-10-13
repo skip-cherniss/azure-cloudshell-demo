@@ -1,0 +1,22 @@
+ssh-keygen -m PEM -t rsa -b 4096 -C "azureuser@hsld-demo-jump-box" -f ~/.ssh/hslddemo -N password
+
+Remove-AzResourceGroup hsld-demo-cloudshell
+
+ssh azureuser@10.111.12.123
+
+https://www.cyberciti.biz/faq/force-ssh-client-to-use-given-private-key-identity-file/
+
+Use the -i option to specify the key when connecting
+
+my_key="~/.ssh/hslddemo"
+ssh -i $my_key azureuser@40.83.33.56
+
+You can enter the following into the .ssh/config file
+
+Host hsld.jumpbox
+     Hostname 40.83.33.56
+     User azureuser
+     IdentityFile ~/.ssh/hslddemo 
+
+Then you can just execute the following command
+ssh hsld.jumpbox
