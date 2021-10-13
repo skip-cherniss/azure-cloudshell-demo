@@ -1,6 +1,6 @@
 ssh-keygen -m PEM -t rsa -b 4096 -C "azureuser@hsld-demo-jump-box" -f ~/.ssh/hslddemo -N password
 
-Remove-AzResourceGroup hsld-demo-cloudshell
+Remove-AzResourceGroup rg-vstudio-cloudshell-demo
 
 ssh azureuser@10.111.12.123
 

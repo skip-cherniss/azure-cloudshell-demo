@@ -145,15 +145,15 @@ function create-newvm {
 ### *******  INITIALIZE VARIABLES
 ### ///////////////////////////////////////////////////////////////////////////////////////////////
 
-$resourceGroup = "hsld-demo-cloudshell"
+$resourceGroup = "rg-vstudio-cloudshell-demo"
 $location = "CentralUS"
-$vmname = "hsld-demo-jump-box"
+$vmname = "vm-vstudio-hsld-demo-jump-box"
 # use the following command to list sizes for a region
 # get-azvmsize -Location "CentralUS"
 $vmSize = "Standard_D1_v2"
 $userPassword = "password"
 $userName = "azureuser"
-$nicName = "nic-hsld-demo-jump-box"
+$nicName = "nic-vstudio-hsld-demo-jump-box"
 $sslPath = "~/.ssh/hslddemo.pub"
 
 
